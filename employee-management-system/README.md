@@ -1,7 +1,7 @@
 How to Run the Project:
 =======================
 	Step 1: Run your backend application (ems-backend)
-	Step 2: Eun your frontend application (ems-frontend)
+	Step 2: Run your frontend application (ems-frontend)
 	
 	
 Running your new Angular Project (ems-frontend)
