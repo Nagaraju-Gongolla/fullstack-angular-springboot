@@ -1,0 +1,18 @@
+How to Run the Project:
+=======================
+	Step 1: Run your backend application (ems-backend)
+	Step 2: Eun your frontend application (ems-frontend)
+	
+	
+Running your new Angular Project (ems-frontend)
+-----------------------------------------------
+	To run your application all you need to do is open the application path in cmd or VSCode and and type the following command
+			 
+		ng serve
+			ex: D:\WorkSpace\gitworkspace\fullstack-angular-springboot\employee-management-system\ems-forntend>ng serve
+			 
+			The above command compiles the Angular application and invokes the Webpack development server. The server keeps a watch on our project folder. If you make any changes in the code, it compiles the project again.
+		
+		You can also use npm start. 
+		
+		The Webpack Development server listens on HTTP Port 4200. Hence open the browser and type http://localhost:4200/ and you will see your UI app is running displayed on the browser.
