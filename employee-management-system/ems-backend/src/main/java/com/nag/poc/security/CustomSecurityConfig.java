@@ -19,7 +19,7 @@ public class CustomSecurityConfig extends WebSecurityConfigurerAdapter {
 		.password("password")
 		.roles("USER")
 		.and()
-		.withUser("amdin")
+		.withUser("admin")
 		.password("password")
 		.roles("USER","ADMIN");
 	}
@@ -33,10 +33,12 @@ public class CustomSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.csrf().disable();
 		http.authorizeRequests()
-		.antMatchers("api/v1/user").hasRole("USER")
-		.antMatchers("api/v1/admin").hasRole("ADMIN")
+		.antMatchers("/api/v1/user").hasRole("USER")
+		.antMatchers("/api/v1/admin").hasRole("ADMIN")
 		.antMatchers("/").permitAll()
-		.and().formLogin();
+		.anyRequest().authenticated()
+		.and()
+		.httpBasic(); // Enable HTTP Basic Authentication
 	}
 	
 }
